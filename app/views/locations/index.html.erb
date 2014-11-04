@@ -1,0 +1,11 @@
+<h1>Locations</h1>
+
+<ul>
+	<% for location in @locations %>
+		<% if location.name.present? %>
+			<li><%= location.name %> - <%= location.city %></li>
+			<% else %>
+			<li><%= location.city %></li>
+		<% end %>
+	<% end %>
+</ul>
