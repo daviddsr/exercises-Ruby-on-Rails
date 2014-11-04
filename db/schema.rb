@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20141104125303) do
   create_table "visits", force: true do |t|
     t.integer  "location_id"
     t.string   "user_name"
-    t.date     "from_date"
-    t.date     "to_date"
+    t.datetime "from_date"
+    t.datetime "to_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

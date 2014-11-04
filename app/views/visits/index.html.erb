@@ -1,0 +1,7 @@
+<h1>Visits</h1>
+
+<ul>
+	<% for visit in @visits %>
+			<li><%= visit.user_name %>  <%= visit.from_date %> - <%= visit.to_date %></li>
+		<% end %>
+</ul>
