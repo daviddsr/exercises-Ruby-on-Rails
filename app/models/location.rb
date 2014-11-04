@@ -3,6 +3,7 @@ class Location < ActiveRecord::Base
 		self.order(created_at: :desc).limit(numero)
 	end
 
-	
+
+
 
 end
