@@ -19,8 +19,9 @@ Location.create city: 'Barcelona', zip_code: 28020, country: 'España', street: 
 Location.create name: 'Maria', city: 'Madrid', zip_code: 28065, country: 'España', street: 'esquinazo'
 
 
-Visit.create  user_name: 'Jhonny', from_date: DateTime.current-4, to_date: DateTime.current-2
-Visit.create  user_name: 'Eddy', from_date: DateTime.current-6, to_date: DateTime.current-2
-Visit.create  user_name: 'Karl', from_date: DateTime.current-5, to_date: DateTime.current-1
-Visit.create  user_name: 'Tom', from_date: DateTime.current-8, to_date: DateTime.current-3
-Visit.create  user_name: 'Willy', from_date: DateTime.current-6, to_date: DateTime.current-1
+Visit.create  location_id: 1, user_name: 'Jhonny', from_date: DateTime.current-4, to_date: DateTime.current-2
+Visit.create  location_id: 1, user_name: 'Eric', from_date: DateTime.current-4, to_date: DateTime.current-2
+Visit.create  location_id: 2, user_name: 'Eddy', from_date: DateTime.current-6, to_date: DateTime.current-2
+Visit.create  location_id: 3, user_name: 'Karl', from_date: DateTime.current-5, to_date: DateTime.current-1
+Visit.create  location_id: 4, user_name: 'Tom', from_date: DateTime.current-8, to_date: DateTime.current-3
+Visit.create  location_id: 5, user_name: 'Willy', from_date: DateTime.current-6, to_date: DateTime.current-1

@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
 
 
-  get 'locations' => 'locations#index'
+resources :locations do
+  resources :visits
+end
 
-  get 'locations/:id' => 'locations#show'
+  
 
-  get 'visits' => 'visits#index'
+  
 
-  get 'visits/:id' => 'visits#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

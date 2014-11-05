@@ -1,11 +1,39 @@
 class VisitsController < ApplicationController
 
 	def index
-		@visits = Visit.lastcreated(10)
+		@location= Location.find(params[:location_id])
+		@visits = @location.visits
+
 	end
 	def show
-		@visit = Visit.find(params[:id])
+		@location = Location.find(params[:location_id])
+		@visit = @location.visits.find(params[:id])
+	end
+
+	def new
+		@location= Location.find params[:location_id]
+		@visit= @location.visits.new 
+	end
+
+	def create
+		@location= Location.find params[:location_id]
+		@visit= @location.visits.new(visit_params)
+
+		if @visit.save
+			# redirect_to(action: 'index', controller: 'visits', location_id: '@location_id')
+			redirect_to location_visits_path @location
+
+		else
+			render new
+		end
+
+
+	end
+
+
+private
+	def visit_params
+		params.require(:visit).permit(:user_name, :from_date, :to_date)
 	end
 
 end
-
