@@ -1,7 +1,20 @@
 <h1>Visits</h1>
 
+<% if flash[:notice] %>
+	<%=  flash[:notice] %>
+<% end %>
 <ul>
 	<% for visit in @visits %>
 			<li><%= visit.user_name %>  <%= visit.from_date %> - <%= visit.to_date %></li>
+			<%= link_to "Delete", location_visit_path(@location, visit), method:'delete', data: {confirm: "Are you sure?"} %>
+			<%= link_to "edit", edit_location_visit_path(@location, visit)%>
 		<% end %>
+		
 </ul>
+
+<h1><%= link_to "Locations", location_visits_path %></h1>
+
+<h1><%= link_to "New Visit", new_location_visit_path(@location) %></h1>
+
+
+

@@ -25,3 +25,4 @@ Visit.create  location_id: 2, user_name: 'Eddy', from_date: DateTime.current-6, 
 Visit.create  location_id: 3, user_name: 'Karl', from_date: DateTime.current-5, to_date: DateTime.current-1
 Visit.create  location_id: 4, user_name: 'Tom', from_date: DateTime.current-8, to_date: DateTime.current-3
 Visit.create  location_id: 5, user_name: 'Willy', from_date: DateTime.current-6, to_date: DateTime.current-1
+

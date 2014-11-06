@@ -3,9 +3,9 @@
 <ul>
 	<% for location in @locations %>
 		<% if location.name.present? %>
-			<li><%= location.name %> - <%= location.city %></li>
+			<li><%= link_to location.name, location_visits_path(location.id) %> - <%= location.city %></li>
 			<% else %>
-			<li><%= location.city %></li>
+			<li><%= link_to location.city, location_visits_path(location.id) %></li>
 		<% end %>
 	<% end %>
 </ul>
